@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notes List</title>
+</head>
+<body>
+  <h1>Notes List</h1>
+  <ol>
+    <% notes.forEach((note) => { %>
+      <li><strong>Title:</strong> <%= note.id %><br>
+      <strong>Description:</strong> <%= note.notes_description %><br>
+      <strong>Author:</strong> <%= note.author %><br></li>
+      <a href = "/notes/update/<%= note.id%>" >Update</a>
+      <form action ="/notes/delete/<%= note.id %>?_method=DELETE" method="POST" ><input type="submit" value="delete"/></form>
+    <% }) %>
+
+  </ol>
+</body>
+</html>

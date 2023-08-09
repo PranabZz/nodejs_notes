@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Update </title>
+  </head>
+  <body>
+    <form  action="/notes/update/<%= data[0].id %>?_method=PUT" method="POST">
+      <input type="number" name="id" value="<%= data[0].id %>"/>
+      <input type="text" name="notes_description" value="<%= data[0].notes_description %>"/>
+      <input type="text" name="author" value="<%= data[0].author %>"/>
+      <input type="submit" value="submit"/>
+    </form>
+  </body>
+</html>
